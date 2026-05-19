@@ -1,0 +1,81 @@
+{
+  "name": "projects/8567945913145678559",
+  "projectId": "8567945913145678559",
+  "title": "Luma Learning Platform",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#2d6a4f",
+    "headlineFont": "DM_SANS",
+    "bodyFont": "DM_SANS",
+    "colorVariant": "TONAL_SPOT",
+    "overridePrimaryColor": "#2d6a4f",
+    "overrideSecondaryColor": "#d8f3dc",
+    "overrideNeutralColor": "#f8f9fa"
+  },
+  "screens": {
+    "0432faad948e4eeaaa13f8ce871d6ca7": {
+      "id": "0432faad948e4eeaaa13f8ce871d6ca7",
+      "sourceScreen": "projects/8567945913145678559/screens/0432faad948e4eeaaa13f8ce871d6ca7",
+      "x": 1600,
+      "y": 0,
+      "width": 120,
+      "height": 40
+    },
+    "1412ea8e3e774df0bc1b9ea7c7b0e50c": {
+      "id": "1412ea8e3e774df0bc1b9ea7c7b0e50c",
+      "sourceScreen": "projects/8567945913145678559/screens/1412ea8e3e774df0bc1b9ea7c7b0e50c",
+      "x": 2120,
+      "y": 0,
+      "width": 1280,
+      "height": 2508
+    },
+    "9d0188cd55264328955e28f3ec0a91b1": {
+      "id": "9d0188cd55264328955e28f3ec0a91b1",
+      "sourceScreen": "projects/8567945913145678559/screens/9d0188cd55264328955e28f3ec0a91b1",
+      "x": 1784,
+      "y": 0,
+      "width": 48,
+      "height": 48
+    },
+    "assets-5975593859294410627-1779222911645": {
+      "id": "assets-5975593859294410627-1779222911645",
+      "sourceScreen": "",
+      "x": 0,
+      "y": 0,
+      "width": 960,
+      "height": 540
+    },
+    "b9b1969b7aa0435594c3c53239465bb3": {
+      "id": "b9b1969b7aa0435594c3c53239465bb3",
+      "sourceScreen": "projects/8567945913145678559/screens/b9b1969b7aa0435594c3c53239465bb3",
+      "x": 1024,
+      "y": 0,
+      "width": 512,
+      "height": 343
+    },
+    "c8b9ba5d104143fd8644b1489b0f0499": {
+      "id": "c8b9ba5d104143fd8644b1489b0f0499",
+      "sourceScreen": "projects/8567945913145678559/screens/c8b9ba5d104143fd8644b1489b0f0499",
+      "x": 2008,
+      "y": 0,
+      "width": 48,
+      "height": 48
+    },
+    "dea4d0d96d884608972246b811c5ebbe": {
+      "id": "dea4d0d96d884608972246b811c5ebbe",
+      "sourceScreen": "projects/8567945913145678559/screens/dea4d0d96d884608972246b811c5ebbe",
+      "x": 1896,
+      "y": 0,
+      "width": 48,
+      "height": 48
+    }
+  },
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}

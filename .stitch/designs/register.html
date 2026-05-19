@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro | Luma</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Dm+Sans:wght@400;500;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1A5319",
+                        "primary-light": "#508D4E",
+                        "on-primary": "#FFFFFF",
+                        surface: "#FCFDF7",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F3F5EB",
+                        "surface-container-high": "#E8EBDD",
+                        "on-surface": "#1A1C18",
+                        "on-surface-variant": "#43493E",
+                        outline: "#73796E",
+                        "outline-variant": "#C3C8BB",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Dm Sans", "sans-serif"],
+                        display: ["Dm Sans", "sans-serif"],
+                        body: ["Dm Sans", "sans-serif"],
+                        label: ["Public Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Dm Sans', sans-serif;
+            background-color: #FCFDF7;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #1A5319;
+            box-shadow: 0 0 0 2px rgba(26, 83, 25, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-hidden">
+<!-- TopNavBar Suppression: Page intent is transactional (Registration) -->
+<main class="flex min-h-screen">
+<!-- Left Side: Visual/Illustration (60%) -->
+<section class="hidden lg:flex lg:w-[60%] bg-[#F3F5EB] relative overflow-hidden items-center justify-center p-12">
+<!-- Decorative Elements -->
+<div class="absolute top-[-10%] left-[-10%] w-64 h-64 bg-primary-light/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 w-full max-w-2xl">
+<img alt="Luma Learning Community" class="w-full h-auto object-contain rounded-xl shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0ugOSL0QorwL4Y-0PjCp4hensxKw4Q9ej0spd0SxFHsw7y5s7xTfFwtr7pWxnxN9cdbZiVNgQwEzZL19btTr0f6lLHgfX7F3Mj1KJbxIOxqsLBZZ28dy-bY5QvtjiRl4hcHo8FMILY7KK-Ni5HzbOLg0ojDiDFIgzVSzCLvOj4OaNEpPdmLcP0Gqiog862i9MyJcQ_6SUXhQl0AM-2SIDYiS1-u-5aQOhW-vtIRJEsV3iEX4_8qCCmBzDg"/>
+<div class="mt-8 text-center">
+<h2 class="text-3xl font-headline font-bold text-primary tracking-tight">Aprende, colabora y crece</h2>
+<p class="mt-4 text-on-surface-variant font-body text-lg max-w-md mx-auto">
+                        Únete a una comunidad global de mentes curiosas y expertos en IA.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Right Side: Registration Card (40%) -->
+<section class="w-full lg:w-[40%] flex flex-col items-center justify-center p-6 md:p-12 bg-surface">
+<!-- Mobile Logo -->
+<div class="lg:hidden absolute top-8 left-8">
+<span class="text-2xl font-headline font-bold text-primary tracking-tight">Luma</span>
+</div>
+<div class="w-full max-w-md space-y-8">
+<div class="text-left">
+<h1 class="text-4xl font-headline font-bold text-primary mb-2">Crea tu cuenta</h1>
+<p class="text-on-surface-variant font-body">Únete a la comunidad de aprendizaje de Luma</p>
+</div>
+<form class="space-y-5" onsubmit="return false;">
+<div class="space-y-1">
+<label class="block text-sm font-label font-semibold text-on-surface" for="name">Nombre completo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">person</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-lg font-body text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="name" placeholder="Tu nombre" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-sm font-label font-semibold text-on-surface" for="email">Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">mail</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border border-outline-variant rounded-lg font-body text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="email" placeholder="ejemplo@correo.com" type="email"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-sm font-label font-semibold text-on-surface" for="password">Contraseña</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">lock</span>
+<input class="w-full pl-10 pr-12 py-3 bg-white border border-outline-variant rounded-lg font-body text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-1 focus:ring-primary transition-all" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-3.5 bg-primary text-on-primary font-bold rounded-lg shadow-md hover:bg-opacity-90 active:scale-[0.98] transition-all duration-200">
+                            Crear cuenta
+                        </button>
+</div>
+</form>
+<div class="space-y-6 pt-2">
+<p class="text-center text-xs text-on-surface-variant leading-relaxed">
+                        Al registrarte, aceptas nuestros <a class="text-primary hover:underline font-medium" href="#">Términos de servicio</a> y <a class="text-primary hover:underline font-medium" href="#">Privacidad</a>.
+                    </p>
+<div class="flex items-center justify-center gap-2 pt-4 border-t border-outline-variant/30">
+<span class="text-on-surface-variant font-body">¿Ya tienes cuenta?</span>
+<a class="text-primary font-bold hover:underline transition-all" href="#">Inicia sesión</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Inclusion (Simplified for registration flow) -->
+<footer class="fixed bottom-0 w-full py-6 lg:w-[40%] right-0 bg-surface hidden md:block">
+<div class="flex justify-center gap-4 text-[10px] text-outline-variant uppercase tracking-widest font-label">
+<span>© 2024 Luma</span>
+<span>•</span>
+<span>Ayuda</span>
+<span>•</span>
+<span>Seguridad</span>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Input visual feedback
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('.material-symbols-outlined').style.color = '#1A5319';
+            });
+            input.addEventListener('blur', () => {
+                if(!input.value) {
+                    input.parentElement.querySelector('.material-symbols-outlined').style.color = '#C3C8BB';
+                }
+            });
+        });
+
+        // Simple Password Toggle (Logic)
+        const toggleBtn = document.querySelector('button[type="button"]');
+        const passInput = document.getElementById('password');
+        toggleBtn.addEventListener('click', () => {
+            const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passInput.setAttribute('type', type);
+            toggleBtn.querySelector('span').textContent = type === 'password' ? 'visibility' : 'visibility_off';
+        });
+    </script>
+</body></html>

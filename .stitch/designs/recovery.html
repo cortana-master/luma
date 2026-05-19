@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recuperar contraseña | Luma</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Dm+Sans:wght@400;500;700;900&amp;family=Public+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2d6a4f",
+                        "on-primary": "#ffffff",
+                        surface: "#ffffff",
+                        "on-surface": "#1a1c1e",
+                        "on-surface-variant": "#44474e",
+                        outline: "#74777f",
+                        "outline-variant": "#c4c6cf",
+                        "primary-container": "#b7f397",
+                        "on-primary-container": "#042100",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Dm Sans", "sans-serif"],
+                        display: ["Dm Sans", "sans-serif"],
+                        body: ["Dm Sans", "sans-serif"],
+                        label: ["Public Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Dm Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .illustration-mask {
+            background-color: #f8faf9;
+            position: relative;
+            overflow: hidden;
+        }
+        .illustration-mask::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 100%);
+            pointer-events: none;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar (Suppressed as per "Linear/Transactional" rule, but following JSON structure if required - using simplified version for focused journey) -->
+<!-- The Shared Components JSON defines TopNavBar, but the "Shell Visibility & Relevance" rule mandates suppression for transactional flows. I will prioritize the layout requested in the task. -->
+<main class="flex-grow flex flex-col md:flex-row min-h-screen">
+<!-- Left Column: Illustration (60%) -->
+<section class="hidden md:flex md:w-[60%] illustration-mask items-center justify-center relative p-12">
+<div class="relative w-full h-full max-w-4xl flex items-center justify-center">
+<img alt="Recover password illustration" class="w-full h-full object-contain rounded-xl" src="https://lh3.googleusercontent.com/aida/ADBb0uhSM2kAVl5jXWZbCKbcrgSCOdcyeNqlAnTL7LZUI0fgByLR4JGh27-CG-wksRedvo3HhT-usBapVEEVU_8O_O9uCdUvn6UQfnXw37nC9QAVXA0T0yoaKRpEgDameUbrBZO5BNpUMKxxRWS8u5ReN64paN8SFAb5O7GEaaLO1mt9Kvz5C85lILnHHjRGCRyBSqRyLNgtaNrtjR5i7g93-hWrZLAFKZme5iRLFbFML4q-3CL1bfmWE9p4lT8"/>
+</div>
+<!-- Ambient decoration -->
+<div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+</section>
+<!-- Right Column: Recovery Form (40%) -->
+<section class="w-full md:w-[40%] flex flex-col items-center justify-center px-6 py-12 md:px-16 bg-surface">
+<div class="w-full max-w-md space-y-8">
+<!-- Brand Logo -->
+<div class="flex justify-center md:justify-start mb-10">
+<img alt="Luma Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiHe0XBK2G0wmPPeSL2XbhRkQZrxRrvOPLx8TRjyQAlRg1-rc08k03qEe7jvsbXKi1oYqr1WObGHgX8tywi2bAIlN3NURZNWmt2ydllUxno-vx3J4SJAIxgyZE6xXtOmyFctZf261ZyoUvObo-Ma40Bb7eSuNKDmYJ8PaceV7JX-KLn_vNzIq2vT02dd66tEg--YAvPyE5_dRfENKV5p12c2LLrPM8jbxNBGa4QA8j9VedNknLLYTPX2w"/>
+</div>
+<!-- Form Header -->
+<div class="text-center md:text-left space-y-3">
+<h1 class="text-3xl md:text-4xl font-display font-black text-on-surface tracking-tight">
+                        Recuperar contraseña
+                    </h1>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                        Ingresa tu email y te enviaremos un enlace para restablecer tu contraseña
+                    </p>
+</div>
+<!-- Recovery Form -->
+<form class="mt-8 space-y-6" id="recoveryForm" onsubmit="handleRecovery(event)">
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant ml-1" for="email">
+                            Correo electrónico
+                        </label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="block w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg font-body focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-outline-variant" id="email" name="email" placeholder="ejemplo@correo.com" required="" type="email"/>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-display font-bold rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group" type="submit">
+<span>Enviar enlace</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<!-- Footer Link -->
+<div class="pt-6 border-t border-outline-variant flex flex-col items-center gap-4">
+<a class="flex items-center gap-2 text-primary font-label text-sm font-semibold hover:underline transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                        Volver al inicio de sesión
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Success Message (Hidden by default) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 glass-card border border-primary/20 px-6 py-4 rounded-xl shadow-xl flex items-center gap-4 opacity-0 pointer-events-none translate-y-4 transition-all duration-300 z-[100]" id="successToast">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="font-display font-bold text-on-surface">¡Enlace enviado!</p>
+<p class="text-xs text-on-surface-variant font-body">Revisa tu bandeja de entrada en unos momentos.</p>
+</div>
+</div>
+<!-- Simple Footer (from JSON structure) -->
+<footer class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-6 bg-surface dark:bg-surface border-t border-outline-variant">
+<p class="font-label text-label text-on-surface-variant text-xs md:text-sm">
+            © 2024 Luma Learning Platform. Todos los derechos reservados.
+        </p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="font-label text-label text-on-surface-variant hover:underline text-xs md:text-sm" href="#">Privacidad</a>
+<a class="font-label text-label text-on-surface-variant hover:underline text-xs md:text-sm" href="#">Términos</a>
+<a class="font-label text-label text-on-surface-variant hover:underline text-xs md:text-sm" href="#">Soporte</a>
+</div>
+</footer>
+<script>
+        function handleRecovery(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button');
+            const originalContent = btn.innerHTML;
+            
+            // Loading state
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> <span>Enviando...</span>';
+            
+            setTimeout(() => {
+                // Success state
+                btn.innerHTML = originalContent;
+                btn.disabled = false;
+                
+                const toast = document.getElementById('successToast');
+                toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                toast.classList.add('opacity-100', 'translate-y-0');
+                
+                setTimeout(() => {
+                    toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    toast.classList.remove('opacity-100', 'translate-y-0');
+                }, 4000);
+            }, 1500);
+        }
+    </script>
+</body></html>

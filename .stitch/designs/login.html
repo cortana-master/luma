@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Luma</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&amp;family=Public+Sans:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2d6a4f",
+                        "primary-container": "#d1e7dd",
+                        "on-primary-container": "#0a261a",
+                        surface: "#fdfcfb",
+                        "surface-container-low": "#f7f6f4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "on-surface-variant": "#404944",
+                        outline: "#707973",
+                        "outline-variant": "#bfc9c2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "md": "0.375rem"
+                    },
+                    fontFamily: {
+                        headline: ["DM Sans", "sans-serif"],
+                        display: ["DM Sans", "sans-serif"],
+                        body: ["DM Sans", "sans-serif"],
+                        label: ["Public Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .login-card {
+            box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.05);
+        }
+        .illustration-side {
+            background: linear-gradient(135deg, #fdfcfb 0%, #f3f0ec 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden">
+<main class="flex min-h-screen w-full">
+<!-- Left Side: Illustration (60%) -->
+<section class="hidden lg:flex lg:w-3/5 illustration-side relative items-center justify-center p-12 overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#d8e2dc]/40 rounded-full blur-[100px]"></div>
+</div>
+<div class="relative z-10 w-full max-w-3xl aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.01]">
+<img alt="Ilustración de un espacio de estudio acogedor" class="w-full h-full object-cover" data-alt="A warm and inviting digital illustration of a cozy study space featuring soft, earthy tones of sage green and cream. A person sits comfortably in a plush armchair using a digital tablet, surrounded by floating icons of books, glowing brains, and lightbulbs representing ideas. The room is filled with large indoor plants, a classic desk lamp, and a bookshelf in the background, all bathed in soft, ethereal morning light streaming through a window. The art style is clean and modern with organic shapes and a gentle, grainy texture." src="https://lh3.googleusercontent.com/aida/ADBb0uhvc_lwXC37hcZcwpPx9DlAApvhtWG2hLtZHc9ORoyzI93fDLYXgUq0XWzuvJSG0x4YjmQGmqSAtpo6vYPe9Q7WVtbSlaU6jrD3tlXMX0QhPpjjNGiiyVRqpUhRuvm31J6sK82ZU3i32xu8d7E4AMWFEjPosHBTMVGFnnnS2UI5XnlbuwpIFHW0lCE_3mUSZFPlB3AbXHlc3O5lia7pXVvzbgPsEMhJ8FqCOi4KSWJBI-TPnRB4ZfdgyA"/>
+</div>
+<!-- Floating Brand Element -->
+<div class="absolute bottom-12 left-12 flex items-center gap-3 bg-white/60 backdrop-blur-md px-6 py-4 rounded-full border border-white/20 shadow-sm">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="text-sm font-label font-medium text-primary tracking-wide">Impulsando tu aprendizaje con IA</span>
+</div>
+</section>
+<!-- Right Side: Login Form (40%) -->
+<section class="w-full lg:w-2/5 flex items-center justify-center p-6 sm:p-12 bg-surface-container-lowest">
+<div class="w-full max-w-md space-y-8">
+<!-- Header & Logo -->
+<div class="text-center lg:text-left">
+<div class="mb-10 flex justify-center lg:justify-start">
+<img alt="Luma Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiHe0XBK2G0wmPPeSL2XbhRkQZrxRrvOPLx8TRjyQAlRg1-rc08k03qEe7jvsbXKi1oYqr1WObGHgX8tywi2bAIlN3NURZNWmt2ydllUxno-vx3J4SJAIxgyZE6xXtOmyFctZf261ZyoUvObo-Ma40Bb7eSuNKDmYJ8PaceV7JX-KLn_vNzIq2vT02dd66tEg--YAvPyE5_dRfENKV5p12c2LLrPM8jbxNBGa4QA8j9VedNknLLYTPX2w"/>
+</div>
+<h1 class="text-3xl font-headline font-bold text-on-surface tracking-tight mb-2">Bienvenido de vuelta</h1>
+<p class="text-on-surface-variant font-label text-sm">Continúa tu viaje de aprendizaje hoy mismo.</p>
+</div>
+<!-- Login Form -->
+<form class="mt-8 space-y-6" onsubmit="return false;">
+<div class="space-y-4">
+<!-- Email Field -->
+<div>
+<label class="block text-sm font-label font-semibold text-on-surface mb-1.5" for="email">Email</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors text-[20px]">mail</span>
+<input autocomplete="email" class="block w-full pl-10 pr-4 py-3 bg-surface-container-low border-transparent rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white transition-all font-body placeholder:text-outline-variant" id="email" name="email" placeholder="ejemplo@correo.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-sm font-label font-semibold text-on-surface" for="password">Contraseña</label>
+<a class="text-xs font-label font-medium text-primary hover:underline transition-all" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors text-[20px]">lock</span>
+<input autocomplete="current-password" class="block w-full pl-10 pr-10 py-3 bg-surface-container-low border-transparent rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white transition-all font-body placeholder:text-outline-variant" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-outline-variant rounded" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm font-label text-on-surface-variant" for="remember-me">Mantener sesión iniciada</label>
+</div>
+<!-- Submit Button -->
+<button class="group relative w-full flex justify-center py-3.5 px-4 border border-transparent text-sm font-headline font-bold rounded-lg text-white bg-primary hover:bg-[#1f4a38] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all active:scale-[0.98]" type="submit">
+                        Iniciar sesión
+                        <span class="absolute right-4 inset-y-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+</button>
+<!-- Divider -->
+<div class="relative my-8">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/30"></div>
+</div>
+<div class="relative flex justify-center text-xs">
+<span class="px-3 bg-surface-container-lowest text-on-surface-variant/60 font-label italic">o</span>
+</div>
+</div>
+<!-- Sign Up Link -->
+<div class="text-center">
+<p class="text-sm font-label text-on-surface-variant">
+                            ¿No tienes cuenta? 
+                            <a class="font-bold text-primary hover:underline ml-1" href="#">Regístrate</a>
+</p>
+</div>
+</form>
+<!-- Simple Footer for Mobile -->
+<footer class="pt-8 lg:hidden flex justify-center gap-6">
+<a class="text-[10px] text-outline hover:text-primary transition-colors uppercase tracking-widest font-label" href="#">Términos</a>
+<a class="text-[10px] text-outline hover:text-primary transition-colors uppercase tracking-widest font-label" href="#">Privacidad</a>
+<a class="text-[10px] text-outline hover:text-primary transition-colors uppercase tracking-widest font-label" href="#">Ayuda</a>
+</footer>
+</div>
+</section>
+</main>
+<script>
+        // Micro-interaction for the "view password" button
+        const passToggle = document.querySelector('button[type="button"]');
+        const passInput = document.querySelector('input[type="password"]');
+        
+        if (passToggle && passInput) {
+            passToggle.addEventListener('click', () => {
+                const isPass = passInput.getAttribute('type') === 'password';
+                passInput.setAttribute('type', isPass ? 'text' : 'password');
+                passToggle.querySelector('span').textContent = isPass ? 'visibility_off' : 'visibility';
+            });
+        }
+
+        // Focus animation for the card
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.closest('.group')?.classList.add('ring-offset-2');
+            });
+            input.addEventListener('blur', () => {
+                input.closest('.group')?.classList.remove('ring-offset-2');
+            });
+        });
+    </script>
+</body></html>
