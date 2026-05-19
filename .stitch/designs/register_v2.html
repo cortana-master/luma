@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registra tu institución | Luma</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Public+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2d6a4f",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#d8f3dc",
+                        "on-primary-container": "#081c15",
+                        "surface": "#fcfaf9",
+                        "on-surface": "#1b1c17",
+                        "surface-variant": "#e1e5d5",
+                        "on-surface-variant": "#44483d",
+                        "outline": "#75796c",
+                        "outline-variant": "#c5c8ba",
+                        "error": "#ba1a1a",
+                        "success": "#2d6a4f"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["DM Sans", "sans-serif"],
+                        "display": ["DM Sans", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-illustration {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDC0TfMHGBZNzsPJBb2thWCHZKqNQGSw9Xwq0BD5reU0lqodyhLaP__P9NnZeQoLcIRUxlGYpw_-KlByvBue1PY34Po5RWEaBlc1ArrVGWdJ3a-GKO9WlRGyjNr0SldXMW3rrXrPIjyrz5_pfd3RmBZ1HMdpI0yQMXpYWTjmAgtVveb6e4BeUztkoqst7YlSBLUOkErbpgWtA7LGhsYOg6kXojTZEAi7reFucXbWk5JUd__d5OMUODtaoJh3T20Jqgbq8IkwhI7CRw');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-input-focus:focus {
+            ring-color: #2d6a4f;
+            border-color: #2d6a4f;
+        }
+        body {
+            background-color: #fcfaf9;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface antialiased">
+<!-- Main Registration Shell -->
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Column: Visual Brand Anchor (55%) -->
+<section class="hidden md:flex md:w-[55%] relative overflow-hidden bg-primary-container">
+<div class="absolute inset-0 bg-illustration"></div>
+<!-- Overlay for integration -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply"></div>
+<!-- Floating Content on Illustration -->
+<div class="relative z-10 p-16 flex flex-col justify-end h-full text-white">
+<div class="max-w-md backdrop-blur-md bg-on-primary-container/30 p-8 rounded-xl border border-white/20">
+<h2 class="font-headline text-3xl font-bold mb-4">Empodera tu ecosistema educativo.</h2>
+<p class="font-body text-lg opacity-90 leading-relaxed">
+                        Únete a las instituciones líderes que ya están transformando la gestión del aprendizaje con Luma.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Right Column: Registration Card (45%) -->
+<section class="w-full md:w-[45%] flex items-center justify-center p-6 md:p-12 lg:p-20 bg-surface overflow-y-auto">
+<div class="w-full max-w-md space-y-8 py-8">
+<!-- Brand Identity -->
+<div class="flex flex-col items-start md:items-center">
+<img alt="Luma Logo" class="h-12 w-auto mb-8" src="https://lh3.googleusercontent.com/aida/ADBb0uiHe0XBK2G0wmPPeSL2XbhRkQZrxRrvOPLx8TRjyQAlRg1-rc08k03qEe7jvsbXKi1oYqr1WObGHgX8tywi2bAIlN3NURZNWmt2ydllUxno-vx3J4SJAIxgyZE6xXtOmyFctZf261ZyoUvObo-Ma40Bb7eSuNKDmYJ8PaceV7JX-KLn_vNzIq2vT02dd66tEg--YAvPyE5_dRfENKV5p12c2LLrPM8jbxNBGa4QA8j9VedNknLLYTPX2w"/>
+<h1 class="font-headline text-3xl font-bold text-on-surface tracking-tight">Registra tu institución</h1>
+<p class="mt-2 text-on-surface-variant font-label text-sm">Comienza tu transformación digital hoy mismo.</p>
+</div>
+<!-- Registration Form -->
+<form class="space-y-5" onsubmit="return false;">
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-on-surface-variant font-label" for="inst-name">Nombre de la institución</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="inst-name" placeholder="Ej. Universidad del Norte" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-on-surface-variant font-label" for="inst-type">Tipo de institución</label>
+<select class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none appearance-none" id="inst-type">
+<option disabled="" selected="" value="">Selecciona una opción</option>
+<option value="colegio">Colegio</option>
+<option value="universidad">Universidad</option>
+<option value="empresa">Empresa</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-on-surface-variant font-label" for="user-name">Tu nombre</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="user-name" placeholder="Tu nombre completo" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-on-surface-variant font-label" for="email">Email institucional</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="email" placeholder="admin@institucion.edu" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1 relative">
+<label class="block text-sm font-semibold text-on-surface-variant font-label" for="password">Contraseña</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none pr-10" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary" onclick="togglePassword('password', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="space-y-1 relative">
+<label class="block text-sm font-semibold text-on-surface-variant font-label" for="confirm-password">Confirmar contraseña</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="confirm-password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-sm font-semibold text-on-surface-variant font-label" for="invite-code">Código de invitación (opcional)</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-white text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="invite-code" placeholder="Código de 6 dígitos" type="text"/>
+</div>
+<!-- CTA Action -->
+<div class="pt-2">
+<button class="w-full bg-primary text-on-primary font-headline font-bold py-4 rounded-lg shadow-lg hover:shadow-xl hover:bg-opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                            Crear cuenta institucional
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Trust Badge -->
+<div class="flex justify-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/50 text-primary font-label text-xs font-semibold rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Prueba gratuita de 14 días · Sin tarjeta
+                        </div>
+</div>
+<!-- Footer Link -->
+<p class="text-center text-sm font-label text-on-surface-variant mt-6">
+                        ¿Ya tienes una cuenta? 
+                        <a class="text-primary font-bold hover:underline" href="#">Iniciar sesión</a>
+</p>
+</form>
+</div>
+</section>
+</main>
+<!-- Global Footer (Shared Component) -->
+<footer class="bg-surface border-t border-outline-variant py-8">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body text-label-small text-on-surface-variant">
+                © 2024 Luma Learning Ecosystems. Professional Grade Education Management.
+            </p>
+<nav class="flex gap-6">
+<a class="font-body text-label-small text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Privacy Policy</a>
+<a class="font-body text-label-small text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Terms of Service</a>
+<a class="font-body text-label-small text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Support</a>
+<a class="font-body text-label-small text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Security</a>
+</nav>
+</div>
+</footer>
+<script>
+        function togglePassword(id, btn) {
+            const input = document.getElementById(id);
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.textContent = 'visibility_off';
+            } else {
+                input.type = 'password';
+                icon.textContent = 'visibility';
+            }
+        }
+
+        // Add micro-interaction to inputs
+        const inputs = document.querySelectorAll('input, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('scale-[1.01]');
+                input.style.transition = 'all 0.2s ease';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('scale-[1.01]');
+            });
+        });
+    </script>
+</body></html>
